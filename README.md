@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @mayerthomas1
 - 👀 I’m interested in software development
-- 🌱 I’m currently learning python,PHP,HTML,SQL
-- 💞️ I’m looking to collaborate on ...
+- 🌱 I’m currently learning Python,PHP,HTML,SQL
+- This GITHUB is to showcase some projects I have worked on in school while obtaining my Masters Degree in Software Development.
 - 📫 How to reach me mayerthomas19@yahoo.com
 
 
