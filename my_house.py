@@ -1,0 +1,111 @@
+import graphics as g
+win = g.GraphWin("My House", 600,600)
+
+day_sky = g.Rectangle(g.Point(0,0), g.Point(600,600))
+day_sky.setFill('lightblue')
+day_sky.setOutline('lightblue')
+day_sky.draw(win)
+
+center_roof_point = g.Point (290,225)
+roof = g.Polygon(g.Point (150,300),center_roof_point,(g.Point(450, 300)))
+roof.setFill('brown')
+roof.setOutline('gray')
+roof.draw(win)
+
+ground = g.Rectangle(g.Point (-1,500),(g.Point (600,600)))
+ground.setFill('green')
+ground.setOutline('green')
+ground.draw(win)
+
+House_wall1 = g.Rectangle( g.Point(200, 300), g.Point(300, 500))
+House_wall1.setFill('purple')
+House_wall1.setOutline('purple')
+House_wall1.draw( win)
+
+House_wall2 = House_wall1.clone()
+House_wall2.move(100,0)
+House_wall2.draw(win)
+
+window_1 = g.Rectangle(g.Point(380,350),g.Point(315,315))
+window_1.setFill('white')
+window_1.draw(win)
+window_2 = window_1.clone()
+window_2.move(-95,0)
+window_2.draw(win)
+
+Front_door = g.Rectangle( g.Point(275,430), g.Point(320,500))
+Front_door.setFill('tan')
+Front_door.setOutline('black')
+Front_door.draw(win)
+
+center_sun = g.Point( 50, 150)
+sun = g.Circle( center_sun,50 )
+sun.setFill('orange')
+sun.setOutline( 'darkred')
+sun.draw(win)
+sun_rays1= g.Line( g.Point(70, 200), g.Point(90,350))
+sun_rays1.setOutline('gold')
+sun_rays1.draw(win)
+sun_rays2= g.Line( g.Point(95, 175), g.Point(155,245))
+sun_rays2.setOutline('gold')
+sun_rays2.draw(win)
+message = g.Text( g.Point(300,200), "Good Afternoon!")
+message.setOutline('yellow')
+message.draw(win)
+
+win.getMouse()
+
+Night_sky = day_sky.clone()
+Night_sky.move( 0,0)
+Night_sky.setFill('black')
+Night_sky.setOutline('black')
+Night_sky.draw(win)
+
+Night_House_wall1 = House_wall1.clone()
+Night_House_wall1.move( 0,0)
+Night_House_wall1.setFill('gray')
+Night_House_wall1.setOutline('gray')
+Night_House_wall1.draw( win)
+
+Night_House_wall2 = House_wall2.clone()
+Night_House_wall2.move(0,0)
+Night_House_wall2.setFill('gray')
+Night_House_wall2.setOutline('gray')
+Night_House_wall2.draw(win)
+
+Night_window1 = window_1.clone()
+Night_window1.move(0,0)
+Night_window1.setFill('yellow')
+Night_window1.draw(win)
+Night_window2 = Night_window1.clone()
+Night_window2.move(-95,0)
+Night_window2.draw(win)
+
+moon = sun.clone()
+moon.move(0,0)
+moon.setFill('white')
+moon.setOutline('yellow')
+moon.draw(win)
+
+Night_ground = ground.clone()
+Night_ground.move(0,0)
+Night_ground.setOutline('white')
+Night_ground.draw(win)
+
+Night_roof = roof.clone()
+Night_roof.move(0,0)
+Night_roof.setFill('gray')
+Night_roof.setOutline('white')
+Night_roof.draw(win)
+
+Night_door = Front_door.clone()
+Night_door.move(0,0)
+Night_door.draw(win)
+message = g.Text( g.Point(300,200), "Goodnight!")
+message.setOutline('white')
+message.draw(win)
+
+win.getMouse()
+win.close()
+
+
